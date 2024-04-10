@@ -1,0 +1,46 @@
+.feedback-wrapper {
+  background-image: url('../assets/49.png');
+  overflow: hidden;
+  height: 100%;
+}
+
+.feedback-container {
+  width: 90%;
+  margin: 20px auto;
+  padding: 20px;
+  overflow-y: auto;
+  max-height: 640px; 
+
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.average-rating {
+  font-size: 3rem; 
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.feedback-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 20px;
+}
+
+.feedback-item {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+
+  word-wrap: break-word;
+}
+
+.star {
+  color: #ffc107;
+}
+@media (max-width: 768px) {
+  .feedback-container {
+    max-height: 790px;
+  }
+}

@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* > *{
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: #dcdce6;
+    /* background-image: url('./assets/background copy.png'); */
+    /* margin-left: 10px; */
+    overflow: hidden;
+    height:100%;
+}
+@media (max-width: 400px){
+ 
+}
+.hero{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    bottom: 0px;
+    /* overflow: hidden; */
+    }  
+    body[data-route='/'] .hero {
+      display: none;
+    }
+    .hero img{
+      width: 50px;
+      animation: bubble 7s linear infinite;
+    }
+    @keyframes bubble{
+      0%{
+        transform: translateY(0);
+        opacity: 0;
+      }
+      50%{
+        opacity: 1;
+      }
+      70%{
+        opacity: 1;
+      }
+      100%{
+        transform: translateY(-80vh);
+        opacity: 0;
+      }
+    }
+    .hero img:nth-child(1){
+      animation-delay: 2s;
+      width: 80px;
+    }
+    .hero img:nth-child(2){
+      animation-delay: 1s;
+    }
+    .hero img:nth-child(3){
+      animation-delay: 0s;
+      width: 60px;
+    }
+    .hero img:nth-child(4){
+      animation-delay: 4.5s;
+      width: 40px;
+    }
+    .hero img:nth-child(5){
+      animation-delay: 3s;
+    }
+    .hero img:nth-child(6){
+      animation-delay: 6s;
+      width: 70px;
+    }
+    .hero img:nth-child(7){
+      animation-delay: 7s;
+    }
+    .hero img:nth-child(8){
+      animation-delay: 0.2s;
+      width: 50px;
+    }
+    .hero img:nth-child(9){
+      animation-delay: 1s;
+    }
+
+
+
+   
+    .notes-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+    
+    
+   
+    .custom-note-item img {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      /* width: 100%; */
+      height: 70%;
+      margin-top: 20px;
+      object-fit: contain;
+      width: auto;
+    }
+    
+    .custom-note-item {
+      position: relative;
+      flex-basis: 23%;
+      height: 280px;
+      padding: 25px;
+      background-color: aqua;
+    
+      border-radius: 30px;
+      margin-bottom: 20px;
+      box-shadow: 0px 2px 10px rgba(12, 143, 214, 0.862);
+      margin-right: 20px; 
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  
+    .custom-note-item:last-child {
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+    }
+ 
+    .custom-note-new {
+      width: 100%;
+      height: 60px;
+      background-image: linear-gradient(79deg, #7439db, #C66FBC 48%, #F7944f);
+      border-radius: 10px;
+      margin-top: 90px;
+    }
+    
+    .custom-note-item:nth-child(2),.custom-note-item:nth-child(8) ,.custom-note-item:nth-child(14){
+      background-color: yellow;
+    }
+    
+    .custom-note-item:nth-child(3) ,.custom-note-item:nth-child(9),.custom-note-item:nth-child(15){
+      background-image: linear-gradient(79deg, #36E177, #00B894 48%, #56E39F);
+    }
+    .custom-note-item:nth-child(4),.custom-note-item:nth-child(10),.custom-note-item:nth-child(16) {
+      background-color: pink;
+    }
+    .custom-note-item:nth-child(5),.custom-note-item:nth-child(11),.custom-note-item:nth-child(17) {
+      background-color: rgb(59, 224, 14);
+    }
+    .custom-note-item:nth-child(6) ,.custom-note-item:nth-child(12),.custom-note-item:nth-child(18) {
+      background-color: rgb(224, 182, 14);
+    }
+    
+    @media (max-width: 768px) {
+      .custom-note-item {
+        flex-basis: 100%; 
+      }
+    }
+    .custom-note-item:hover{
+      border-radius: 10%;
+      background-color: white;
+      background-image:linear-gradient(79deg, #ffffff, #fafffe 48%, #ffffff);
+  }
+  .typewriter {
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: 0.15em;
+    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+    font-size: 20px;
+    font-family: 'Dancing Script', cursive;
+  }
+  
+
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
+ 
+  @keyframes blink-caret {
+    from,
+    to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: #000;
+    }
+  }
+
+  .typewriter::after {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 1px;
+    background-color: transparent;
+  }
+  
+
+  .typewriter.hide-line::after {
+    display: none;
+  }
+  
